@@ -1,0 +1,156 @@
+.overall {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 15% auto;
+  grid-template-areas: "o-a" "o-b";
+}
+
+.main-div-a {
+  grid-area: o-a;
+  display: flex;
+  padding: 0.5rem;
+}
+
+.main-div-b {
+  grid-area: o-b;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  grid-template-rows: 100%;
+  grid-template-areas: "m-a m-b";
+}
+
+.sub-div-a {
+  grid-area: m-a;
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  position: relative;
+}
+
+.sub-div-b {
+  grid-area: m-b;
+}
+
+.sub-content {
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  margin-left: 1rem; /* Adjusted margin */
+  gap: 1rem; /* Adjusted gap */
+}
+
+.name {
+  font-size: 2rem; /* Adjusted font size */
+  font-weight: 700;
+}
+
+.subname {
+  font-size: 1.5rem; /* Adjusted font size */
+  font-weight: 500;
+}
+
+.i-box {
+  height: 3rem; /* Adjusted height */
+  width: 20rem; /* Adjusted width */
+  border-radius: 7px;
+  padding-left: 1rem;
+  border-style: none;
+  background-color: #F0EFFF;
+  color: #B0ACFF;
+  font-size: 1.2rem;
+}
+
+.i-box::placeholder {
+  color: #B0ACFF;
+}
+
+.form-box {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+button {
+  height: 3rem; /* Adjusted height */
+  width: 20rem; /* Adjusted width */
+  border-radius: 10px;
+  padding-left: 1rem;
+  background-color: #4D47C3;
+  color: white;
+  border-style: none;
+  font-size: 1.2rem;
+}
+
+button:hover {
+  opacity: 0.9; /* Adjusted opacity */
+}
+
+.a {
+  text-decoration: none;
+  color: gray;
+  position: absolute;
+  top: 54%;
+  right: 15%;
+}
+
+.g-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 3rem;
+  width: auto;
+}
+
+.icon {
+  height: 3rem;
+  width: 3rem;
+}
+
+.img-b { 
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+/* Your existing CSS styles */
+
+/* Media queries */
+/* For screens smaller than 768px (such as smartphones) */
+@media (max-width: 767px) {
+  .main-div-b {
+    grid-template-columns: 100%; /* Change to single column layout */
+    grid-template-rows: auto; /* Allow rows to expand based on content */
+  }
+
+  .sub-div-a {
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .sub-content {
+    margin-left: 0; /* Adjust margin for smaller screens */
+  }
+}
+
+/* For screens between 768px and 1023px (such as tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .sub-content {
+    font-size: 1.8rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/* For screens larger than 1023px (such as desktops) */
+@media (min-width: 1024px) {
+  .sub-content {
+    margin-left: 5rem; /* Restore margin for larger screens */
+  }
+}

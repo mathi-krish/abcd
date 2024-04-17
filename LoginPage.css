@@ -1,0 +1,131 @@
+.overall {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 15% auto;
+  grid-template-areas: "o-a" "o-b";
+}
+
+.main-div-a {
+  grid-area: o-a;
+  display: flex;
+  padding: 0.5rem;
+}
+
+.main-div-b {
+  grid-area: o-b;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  grid-template-rows: 100%;
+  grid-template-areas: "m-a m-b";
+}
+
+.sub-div-a {
+  grid-area: m-a;
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  position: relative;
+}
+
+.sub-div-b {
+  grid-area: m-b;
+}
+
+.sub-content{
+  height: 30rem;
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  margin-left: 5rem;
+  margin-bottom: 8rem;
+  gap: 4.5rem;
+  
+}
+
+.name{
+  position: absolute;
+  font-size: 3.5rem;
+  bottom: 18rem;
+  font-weight: 700;
+}
+
+.subname{
+  position: absolute;
+  font-size: 2.2rem;
+  bottom: 15rem;
+  font-weight: 500;
+  top: 7.5rem;
+}
+
+.i-box{
+  height: 4rem;
+  width: 24rem;
+  border-radius: 7px;
+  padding-left: 1rem;
+  border-style: none;
+  background-color: #F0EFFF;
+  color: #B0ACFF;
+  font-size: 1.2rem;
+}
+
+.i-box::placeholder {
+  color: #B0ACFF ; 
+}
+
+.form-box{
+  height: 42rem;
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+}
+
+button{
+  height: 4rem;
+  width: 23rem;
+  border-radius: 10px;
+  padding-left: 1rem;
+  background-color: #4D47C3;
+  color: white;
+  border-style: none;
+  font-size: 1.2rem;
+}
+
+button:hover{
+  opacity: 90%;
+}
+
+.a{
+  text-decoration: none;
+  color: gray;
+  position: absolute;
+  top: 54%;
+  right: 15%;
+}
+
+.g-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 3rem;
+  width: 100%;
+}
+
+.icon{
+  height: 3rem;
+  width: 3rem;
+}
+
+.img-b{ 
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
